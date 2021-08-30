@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="André DeGrange">
+    <meta name="description" content="Week 6 JavaScript Pay Calculator">
+
+    <title>Week 6 | JavaScript Pay Calculator</title>
+</head>
+
+<body>
+    <script>
+        var hourlyPay = Number(prompt("Please enter your hourly pay rate:"))
+        var hoursWorked = Number(prompt("Please enter your hours worked:"))
+        var taxRate = 0.2
+        var grossPay = 0.0
+        var taxesPaid = 0.0
+        var netPay = 0.0
+        
+        grossPay = (hourlyPay * hoursWorked).toFixed(2)
+        taxesPaid = (grossPay * taxRate).toFixed(2)
+        netPay = (grossPay - taxesPaid).toFixed(2)
+
+        alert(" Gross Pay: $" + grossPay + "\n Uncle Sam's Cut: $" + taxesPaid + "\n Net Pay: $" + netPay)
+        console.log("Gross Pay: $" + grossPay)
+        console.log("Uncle Sam's Cut: $" + taxesPaid)
+        console.log("Net Pay: $" + netPay)
+    </script>
+</body>
